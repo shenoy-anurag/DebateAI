@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "book-rag"
+name = "debate-ai"
 version = "0.0.1"
 description = "A RAG based chatbot for querying books and generating fan fiction."
 authors = ["Anurag <19914954+shenoy-anurag@users.noreply.github.com>"]
@@ -23,6 +23,7 @@ websockets = "^15.0"
 hugchat = "^0.4.18"
 langchain-openai = "^0.3.7"
 faiss-cpu = "^1.10.0"
+pandas = "^2.2.3"
 
 
 [build-system]

@@ -71,6 +71,7 @@ async function handleSubmit(text?: string) {
   return (
     <div className="flex flex-col min-w-0 h-dvh bg-background">
       <Header/>
+      {/* <div className="mx-auto flex-col" >Should the Transformer model be used as the primary architecture for all natural language processing tasks?</div> */}
       <div className="flex flex-col min-w-0 gap-6 flex-1 overflow-y-scroll pt-4" ref={messagesContainerRef}>
         {messages.length == 0 && <Overview />}
         {messages.map((message, index) => (
