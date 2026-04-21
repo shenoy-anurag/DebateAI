@@ -1,31 +1,38 @@
-[tool.poetry]
+[project]
 name = "debate-ai"
 version = "0.0.1"
-description = "A RAG based chatbot for querying books and generating fan fiction."
-authors = ["Anurag <19914954+shenoy-anurag@users.noreply.github.com>"]
+description = "A multi-agent research paper debate framework."
+authors = [{name = "Anurag Shenoy", email = "19914954+shenoy-anurag@users.noreply.github.com"}]
 license = "MIT"
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.12"
+dependencies = [
+    "apscheduler>=3.11.2",
+    "fastapi[standard]>=0.135.3",
+    "langchain>=1.2.15",
+    "langchain-community>=0.4.1",
+    "langchain-openai>=1.1.12",
+    "langchain-weaviate>=0.0.4",
+    "pydantic-settings>=2.13.1",
+    "python-dotenv>=1.2.2",
+    "pytz>=2026.1.post1",
+    "requests>=2.33.1",
+    "sqlmodel>=0.0.38",
+    "weaviate-client>=4.11.1",
+    "websockets>=16.0",
+]
 
-
-[tool.poetry.dependencies]
-python = "3.12.9"
-fastapi = {extras = ["standard"], version = "^0.115.11"}
-weaviate-client = "^4.11.1"
-langchain-weaviate = "^0.0.4"
-ipykernel = "^6.29.5"
-langchain = "^0.3.19"
-langchain-community = "^0.3.18"
-pypdf = "^5.3.0"
-langchain-ollama = "^0.2.3"
-jq = "^1.8.0"
-websockets = "^15.0"
-hugchat = "^0.4.18"
-langchain-openai = "^0.3.7"
-faiss-cpu = "^1.10.0"
-pandas = "^2.2.3"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "beautifulsoup4>=4.14.3",
+    "coverage>=7.13.5",
+    "faiss-cpu>=1.10.0",
+    "hugchat>=0.4.18",
+    "ipykernel>=7.2.0",
+    "jq>=1.8.0",
+    "nltk>=3.9.4",
+    "pypdf>=5.3.0",
+    "pandas>=3.0.2",
+    "pytest>=9.0.3",
+    "ruff>=0.15.9",
+]

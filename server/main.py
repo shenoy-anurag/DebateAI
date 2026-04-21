@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from views import chat, root
+from api import upload, topics, debate
 
 
 def add_static_files(app: FastAPI):
@@ -27,6 +28,10 @@ add_static_files(app)
 
 app.include_router(chat.router)
 app.include_router(root.router)
+
+app.include_router(upload.router)
+app.include_router(topics.router)
+app.include_router(debate.router)
 
 
 if __name__ == "__main__":
